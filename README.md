@@ -2,6 +2,7 @@
 
 ## Getting Started
 
+
 Este repositorio se refiere a la segunda unidad de Estructuras de Datos, donde se cubren estructuras como sets y diccionarios
 ## Requirements
 - Java JDK 11 or higher
@@ -150,4 +151,8 @@ Si se usara un `HashMap` en lugar de `TreeMap`, entonces `hashCode()` y `equals(
 
 ### Conclusión
 Para administrar un directorio telefónico sin claves duplicadas y ordenado por nombre, la mejor solución es un **`TreeMap`**. Esto garantiza orden automático y eficiencia en operaciones de búsqueda y modificación.
+---
+## Captura
+![img_2.png](img_2.png)
+![img_3.png](img_3.png)
 

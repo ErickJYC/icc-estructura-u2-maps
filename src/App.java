@@ -22,7 +22,10 @@ public class App {
     }
 
     private static void runMapExamlpe() {
-        throw new UnsupportedOperationException("Not implemented yet");
+        Mapa mapa = new Mapa();
+        mapa.ejemploConHashMap();
+        mapa.ejemploConLinkedHashMap();
+        mapa.ejemploConTreeMap();
     }
 
     private static void runEjerccios() {
