@@ -157,4 +157,5 @@ Para administrar un directorio telefónico sin claves duplicadas y ordenado por 
 
 ![img_2.png](img_2.png)
 ![img_3.png](img_3.png)
+![img.png](img.png)
 
