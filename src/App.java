@@ -61,32 +61,24 @@ public class App {
         System.out.println("---------------------------------------EJERCICIOS---------------------------");
         Ejercicios ejercicios = new Ejercicios();
 
-        // Ejercicio 1: Verificar si son anagramas
-        String str1 = "listen";
-        String str2 = "silent";
-        boolean anagramResult = Ejercicios.areAnagrams(str1, str2);
-        System.out.println("¿" + str1 + " y " + str2 + " son anagramas? " + anagramResult);
+        System.out.println("\n\tEjercicio Anagramas");
+        System.out.println("listen y silent: " + Ejercicios.areAnagrams("listen", "silent"));
+        System.out.println("hello y bello: " + Ejercicios.areAnagrams("hello", "bello"));
+        System.out.println("triangle y integral: " + Ejercicios.areAnagrams("triangle", "integral"));
 
-        // Ejercicio 2: Sumatoria de dos
-        int[] numeros = {9, 2, 3, 6};
-        int objetivo = 5;
-        int[] resultado = ejercicios.sumatoriaDeDos(numeros, objetivo);
-        if (resultado != null) {
-            System.out.println("Índices que suman " + objetivo + ": [" + resultado[0] + ", " + resultado[1] + "]");
-        } else {
-            System.out.println("No se encontró una combinación que sume " + objetivo);
+        System.out.println("\n\tEjercicio Suma de dos");
+        System.out.println("Input: nums = [9,2,3,6], objetivo = 5: ");
+        int[] nums = ejercicios.sumatoriaDeDos(
+                new int[] { 9, 2, 3, 6 }, 5);
+        for (int num : nums) {
+            System.out.print(num + "|");
         }
+        System.out.println("\nInput: nums = [9,2,3,6], objetivo = 5: " + ejercicios.sumatoriaDeDos(new int[] { 9, 2, 3, 6 }, 10));
 
-        // Ejercicio 3: Contar caracteres
-        String texto = "hola";
-        System.out.println("Conteo de caracteres en " + texto + " : ");
-        ejercicios.contarCaracteres(texto);
+        System.out.println("\n\tFrecuencia Contar Caracteres");
+        ejercicios.contarCaracteres("hola");
 
-        // Ejercicio 4: Verificar si son anagramas usando método no estático
-        String palabra1 = "roma";
-        String palabra2 = "amor";
-        boolean resultado2 = ejercicios.sonAnagramas(palabra1, palabra2);
-        System.out.println("¿" + palabra1 + " y " + palabra2 + " son anagramas? " + resultado2);
-
+        System.out.println("\tVerificar Anagramas");
+        System.out.println("amor y roma: " + ejercicios.sonAnagramas("amor", "roma"));
     }
 }

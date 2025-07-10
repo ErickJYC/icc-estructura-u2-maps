@@ -1,6 +1,7 @@
 package controllers;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class Ejercicios {
@@ -94,18 +95,20 @@ public class Ejercicios {
      * Output: {h=1, o=1, l=1, a=1}
      */
     public void contarCaracteres(String texto) {
-        if (texto == null || texto.isEmpty()) {
-            System.out.println("Texto vacío o nulo.");
-            return;
+        Map<Character, Integer> mapa = new LinkedHashMap<>();
+        for (Character c : texto.toCharArray()) {
+            if (mapa.containsKey(c)) {
+                int n = mapa.get(c) + 1;
+                mapa.replace(c, n);
+            } else {
+                mapa.put(c, 1);
+            }
         }
 
-        Map<Character, Integer> conteo = new HashMap<>();
-
-        for (char c : texto.toCharArray()) {
-            conteo.put(c, conteo.getOrDefault(c, 0) + 1);
+        for (Map.Entry<Character, Integer> entry : mapa.entrySet()) {
+            System.out.print(entry.getKey() + " = " + entry.getValue() + " | ");
         }
-
-        System.out.println(conteo);
+        System.out.println("\n");
     }
 
     /**
